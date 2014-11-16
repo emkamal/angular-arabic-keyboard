@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js" ng-controller="ArabicKeyCtrl"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Arabic Keyboard</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="sortable/ng-sortable.min.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+	
+	<!--[if lt IE 7]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	
+	<div class="mobile-only mobile-message">
+		I'm sorry, this keyboard web app is not intended to be used on a mobile device. To use arabic keyboard on your mobile device, You better use arabic keyboard native apps available on your device's apps marketplace. It's more convenient for mobile arabic typing experience.<br/>:)
+	</div>
+  
+	<div class="bodyWrapper horizontalHeader ltrLayout">
+		<div class="headerWrapper">
+			<header>
+				<div class="headerMainBar">
+					<div class="headerMainBarLeft">
+						<h1 class="logo">Arabic Keyboard</h1>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="middlerWrapper">
+			<div class="middler">
+				<div class="middlerMainBar">
+					<div class="mainArea clearfix"><main>
+						<div id="leftPanel" class="left mainPanel" style="width: {{options.leftWidth}}%">
+							<div class="textareaOptions clearfix">
+								<div class="left">
+									Font
+									<select 
+										id="textareaFont" 
+										ng-change="saveState()"
+										ng-model="options['font']" 
+										ng-options="fontOption.fontValue as fontOption.fontName for fontOption in fontOptions">
+									</select>
+								</div>
+								
+								<div class="right">
+									Size
+									<select 
+										id="textareaFontSize" 
+										ng-change="saveState()"
+										ng-model="options['fontSize']" 
+										ng-options="fontSize for fontSize in fontSizeOptions">
+									</select>
+								</div>
+							</div>
+							<textarea 
+								dir="rtl" 
+								class="mainTextarea" 
+								style="font-family: {{options['font']}}; font-size: {{options['fontSize']}}px"
+								placeholder="Type here..." 
+								ng-model="text" 
+								ng-change="transliterate()" 
+								sync-focus-with="isFocused" 
+							>
+							</textarea>
+							<div class="textareaOptionsBottom clearfix">
+								<div class="left textActions">
+									<ul>
+										<li><a id="copyLink" href="#" data-clipboard-text="{{text}}">Copy</a></li>
+										<li><a target="_blank" href="https://translate.google.com/#ar/en/{{text}}">Translate</a></li>
+										<li><a target="_blank" href="https://www.google.com/#q={{text}}">Search</a></li>
+										<li><a target="_blank" href="https://www.google.com/search?hl=en&site=imghp&tbm=isch&q={{text}}">Images</a></li>
+									</ul>
+								</div>
+							</div>
+							
+						</div>
+						<div class="resizer" style="left: {{options.leftWidth}}%"
+							resizer="vertical" 
+							resizer-width="6" 
+							resizer-left="#leftPanel" 
+							resizer-right="#rightPanel" 
+							resizer-min="30"
+							resizer-max="75"
+						></div>
+						<div id="rightPanel" class="right mainPanel" style="width: {{100-options.leftWidth}}%">
+							<div class="keyboardAreaWrapper" id="board">
+								<div class="keyboardOptionsArea clearfix">
+									<div class="left">
+										<label for="transliterateTyping">
+											<input 
+												type="checkbox" 
+												id="transliterateTyping" 
+												ng-change="saveState()"
+												ng-model="options['transliterateTyping']" 
+												>
+											Transliterate typing
+										</label>
+									</div>
+									<div class="right">
+										<span ng-show="options['transliterateTyping']">
+											Transliteration scheme
+											<select 
+												id="transliterationScheme" 
+												ng-change="saveState()"
+												ng-model="transliterationScheme" 
+												ng-options="transliterationScheme for transliterationScheme in transliterationSchemeOptions">
+											</select>
+											<a class="addButton" href="#addTransliterationScheme">+</a>
+										</span>
+									</div>
+								</div>
+								<div id="addTransliterationScheme">
+									<div class="popup">
+										<h2>Let's contribute!</h2>
+										<p>For you developers out there, I uploads the whole code of this app on github as open source project. So, by simply forking it, you could help me extend the features and functionality of this keyboard app, including adding more transliteration system. The transliteration files is in JSON format so you could just copy the existing transliteration files and edit it from there.</p>
+										
+										<p>So that's it, I'll be waiting for your pull request ;)</p>
+										<a class="closebutton" href="#">&times;</a>
+									</div>
+								</div>
+								
+								<div class="keyboardArea" ng-model="transliterationKeys[transliterationScheme]" as-sortable="sortableOptions">
+									<div 
+										class="buttonGroupWrapper clearfix embedshadow" 
+										ng-repeat="group in transliterationKeys[transliterationScheme]" 
+										ng-if="group.groupName != 'grammar rules'" 
+										as-sortable-item
+									>
+										<div class="buttonGroupTitle" as-sortable-item-handle><h3>{{group.groupName}}</h3></div>
+										<div class="buttonGroup clearfix">
+											<a 
+												class="embedshadow"
+												ng-repeat="char in group.groupSet" 
+												ng-click="write(char.arabicChar)"
+												title="{{char.name}}" 
+											>
+												<div class="arabChar" ng-switch on="group.groupName == 'diacritics' || char.writingStyle == 'needTatweel'">
+													<span ng-switch-when="true">{{char.arabicChar}}&#x0640;&#x0640;</span>
+													<span ng-switch-default>{{char.arabicChar}}</span>
+												</div>
+												<div class="transChar num{{char.transliteration.length}}">
+													<ul>
+														<li ng-repeat="letter in char.transliteration" ng-if="letter != '[void]'">{{letter}}</li>
+													</ul>
+												</div>
+											</a>
+										</div>
+									</div>
+									
+								</div>
+								<div class="keyboardDesc">
+									<h2>{{transliterationInfo[transliterationScheme].DescTitle}}</h2>
+									<a target="_blank" href="{{transliterationInfo[transliterationScheme].Link}}">{{transliterationInfo[transliterationScheme].Link}}</a>
+									{{transliterationInfo[transliterationScheme].Desc}}
+								</div>
+							</div>
+						</div>
+					</main></div>
+				</div>
+			</div>
+		</div>
+		<div class="footerWrapper">
+			<footer>
+				<div class="footerBottomBar clearfix">
+					<!-- copyright, footerText, footerMenu -->
+					<div class="copyright left">&copy; Copyright 2014 KamaLabs. All rights reserved.</div>
+					<div class="footerText right">Developed with angularJs</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-cookie/angular-cookie.min.js"></script>
+  <script src="sortable/ng-sortable.min.js"></script>
+  <script src="ZeroClipboard.min.js"></script>
+  <script src="app.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

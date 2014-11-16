@@ -1,0 +1,218 @@
+﻿{
+	"TransliterationScheme": "ArabTex",
+	"Link": "http://en.wikipedia.org/wiki/ArabTeX",
+	"DescTitle": "ArabTex Transliteration System",
+	"Desc": "ArabTex transliteration system is an adaptation of transliteration created by ArabTex software. ArabTeX itself is a free software package providing support for the Arabic and Hebrew alphabets to TeX and LaTeX. Written by Klaus Lagally, it can take romanized ASCII or native script input to produce quality ligatures for Arabic, Persian, Urdu, Pashto, Sindhi, Shahmukhi Punjabi, Maghribi, Uyghur, Kashmiri, Hebrew, Judeo-Arabic, Ladino and Yiddish",
+	"TransliterationMap": [
+	
+		{"groupName": "basic characters", "groupSet": [
+			{"unicodeName": "ARABIC LETTER ALEF", "name": "ʾalif", "arabicChar": "\u0627", "transliteration": ["A"]},
+			{"unicodeName": "ARABIC LETTER BEH", "name": "bā’", "arabicChar": "\u0628", "transliteration": ["b"]},
+			{"unicodeName": "ARABIC LETTER TEH", "name": "tā’", "arabicChar": "\u062A", "transliteration": ["t"]},
+			{"unicodeName": "ARABIC LETTER THEH", "name": "thā’", "arabicChar": "\u062B", "transliteration": ["_t"]},
+			{"unicodeName": "ARABIC LETTER JEEM", "name": "jīm", "arabicChar": "\u062C", "transliteration": ["j", "^g"]},
+			{"unicodeName": "ARABIC LETTER HAH", "name": "ḥā’", "arabicChar": "\u062D", "transliteration": [".h"]},
+			{"unicodeName": "ARABIC LETTER KHAH", "name": "khā’", "arabicChar": "\u062E", "transliteration": ["x","_h"]},
+			{"unicodeName": "ARABIC LETTER DAL", "name": "dāl", "arabicChar": "\u062F", "transliteration": ["d"]},
+			{"unicodeName": "ARABIC LETTER THAL", "name": "dhāl", "arabicChar": "\u0630", "transliteration": ["_d"]},
+			{"unicodeName": "ARABIC LETTER REH", "name": "rā’", "arabicChar": "\u0631", "transliteration": ["r"]},
+			{"unicodeName": "ARABIC LETTER ZAIN", "name": "zāy", "arabicChar": "\u0632", "transliteration": ["z"]},
+			{"unicodeName": "ARABIC LETTER SEEN", "name": "sīn", "arabicChar": "\u0633", "transliteration": ["s"]},
+			{"unicodeName": "ARABIC LETTER SHEEN", "name": "shīn", "arabicChar": "\u0634", "transliteration": ["^s"]},
+			{"unicodeName": "ARABIC LETTER SAD", "name": "ṣād", "arabicChar": "\u0635", "transliteration": [".s"]},
+			{"unicodeName": "ARABIC LETTER DAD", "name": "ḍād", "arabicChar": "\u0636", "transliteration": [".d"]},
+			{"unicodeName": "ARABIC LETTER TAH", "name": "ṭā’", "arabicChar": "\u0637", "transliteration": [".t"]},
+			{"unicodeName": "ARABIC LETTER ZAH", "name": "ẓā’", "arabicChar": "\u0638", "transliteration": [".z"]},
+			{"unicodeName": "ARABIC LETTER AIN", "name": "‘ayn", "arabicChar": "\u0639", "transliteration": ["`"]},
+			{"unicodeName": "ARABIC LETTER GHAIN", "name": "ghayn", "arabicChar": "\u063A", "transliteration": [".g"]},
+			{"unicodeName": "ARABIC LETTER FEH", "name": "fā’", "arabicChar": "\u0641", "transliteration": ["f"]},
+			{"unicodeName": "ARABIC LETTER QAF", "name": "qāf", "arabicChar": "\u0642", "transliteration": ["q"]},
+			{"unicodeName": "ARABIC LETTER KAF", "name": "kāf", "arabicChar": "\u0643", "transliteration": ["k"]},
+			{"unicodeName": "ARABIC LETTER LAM", "name": "lām", "arabicChar": "\u0644", "transliteration": ["l"]},
+			{"unicodeName": "ARABIC LETTER MEEM", "name": "mīm", "arabicChar": "\u0645", "transliteration": ["m"]},
+			{"unicodeName": "ARABIC LETTER NOON", "name": "nūn", "arabicChar": "\u0646", "transliteration": ["n"]},
+			{"unicodeName": "ARABIC LETTER HEH", "name": "hā’", "arabicChar": "\u0647", "transliteration": ["h"]},
+			{"unicodeName": "ARABIC LETTER WAW", "name": "wāw", "arabicChar": "\u0648", "transliteration": ["w", "U"]},
+			{"unicodeName": "ARABIC LETTER YEH", "name": "yā’", "arabicChar": "\u064A", "transliteration": ["y", "I"]},
+			{"unicodeName": "ARABIC LETTER HAMZA", "name": "hamzah", "arabicChar": "\u0621", "transliteration": ["'"]}
+		]},
+		
+		{"groupName": "special characters", "groupSet": [
+			{
+				"unicodeName": "ARABIC LETTER ALEF WITH HAMZA ABOVE", "name": "alif with hamzah above", 
+				"arabicChar": "\u0623", "transliteration": ["a'"]
+			},
+			{
+				"unicodeName": "ARABIC LETTER ALEF WITH HAMZA BELOW", "name": "alif with hamzah under", 
+				"arabicChar": "\u0625", "transliteration": ["i"]
+			},
+			{
+				"unicodeName": "ARABIC LETTER ALEF WITH MADDA ABOVE", "name": "alif with maddah", 
+				"arabicChar": "\u0622", "transliteration": ["'A"]
+			},
+			{
+				"unicodeName": "ARABIC LETTER WAW WITH HAMZA ABOVE", "name": "waw with hamzah above", 
+				"arabicChar": "\u0624", "transliteration": ["U'"]
+			},
+			{
+				"unicodeName": "ARABIC LETTER YEH WITH HAMZA ABOVE", "name": "yā’ with hamzah above", 
+				"arabicChar": "\u0626", "transliteration": ["'y"]
+			},
+			{
+				"unicodeName": "ARABIC LETTER ALEF MAQSURA", "name": "alif maqsurah", 
+				"arabicChar": "\u0649", "transliteration": ["Y"]
+			},
+			{
+				"unicodeName": "ARABIC LETTER TEH MARBUTA", "name": "tā’ marbuthah", 
+				"arabicChar": "\u0629", "transliteration": ["T"]
+			},
+			{
+				"unicodeName": "ARABIC LETTER ALEF WASLA", "name": "alif waslah", 
+				"arabicChar": "\u0671", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC TATWEEL", "name": "tatwil", 
+				"arabicChar": "\u0640", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC LETTER PEH", "name": "peh", 
+				"arabicChar": "\u067E", "transliteration": ["p"]
+			},
+			{
+				"unicodeName": "ARABIC LETTER TCHEH", "name": "tcheh", 
+				"arabicChar": "\u0686", "transliteration": ["^c"]
+			},
+			{
+				"unicodeName": "ARABIC LETTER JEH", "name": "jeh", 
+				"arabicChar": "\u0698", "transliteration": ["^z"]
+			},
+			{
+				"unicodeName": "ARABIC LETTER GAF", "name": "gaf", 
+				"arabicChar": "\u06AF", "transliteration": ["g"]
+			},
+			{
+				"unicodeName": "ARABIC LETTER KEHEH", "name": "keheh", 
+				"arabicChar": "\u06A9", "transliteration": [".k"]
+			},
+			{
+				"unicodeName": "ARABIC LETTER HEH WITH YEH", "name": "heh with yeh", 
+				"arabicChar": "\u06C0", "transliteration": ["H-i"]
+			}
+		]},
+		{"groupName": "numerals", "groupSet": [
+			{"unicodeName": "ARABIC-INDIC DIGIT ZERO", "name": "zero", "arabicChar": "\u0660", "transliteration": ["0"]},
+			{"unicodeName": "ARABIC-INDIC DIGIT ONE", "name": "one", "arabicChar": "\u0661", "transliteration": ["1"]},
+			{"unicodeName": "ARABIC-INDIC DIGIT TWO", "name": "two", "arabicChar": "\u0662", "transliteration": ["2"]},
+			{"unicodeName": "ARABIC-INDIC DIGIT THREE", "name": "thre", "arabicChar": "\u0663", "transliteration": ["3"]},
+			{"unicodeName": "ARABIC-INDIC DIGIT FOUR", "name": "four", "arabicChar": "\u0664", "transliteration": ["4"]},
+			{"unicodeName": "ARABIC-INDIC DIGIT FIVE", "name": "five", "arabicChar": "\u0665", "transliteration": ["5"]},
+			{"unicodeName": "ARABIC-INDIC DIGIT SIX", "name": "six", "arabicChar": "\u0666", "transliteration": ["6"]},
+			{"unicodeName": "ARABIC-INDIC DIGIT SEVEN", "name": "seven", "arabicChar": "\u0667", "transliteration": ["7"]},
+			{"unicodeName": "ARABIC-INDIC DIGIT EIGHT", "name": "eight", "arabicChar": "\u0668", "transliteration": ["8"]},
+			{"unicodeName": "ARABIC-INDIC DIGIT NINE", "name": "nine", "arabicChar": "\u0669", "transliteration": ["9"]}
+		]},
+		{"groupName": "symbols", "groupSet": [
+			{
+				"unicodeName": "ARABIC-INDIC CUBE ROOT", "name": "cube root", 
+				"arabicChar": "\u0606", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC-INDIC FOURTH ROOT", "name": "fourth root", 
+				"arabicChar": "\u0607", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC-INDIC PER MILLE SIGN", "name": "per mille sign", 
+				"arabicChar": "\u0609", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC-INDIC PER TEN THOUSAND SIGN", "name": "per ten thousand sign", 
+				"arabicChar": "\u060A", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC COMMA", "name": "comma", 
+				"arabicChar": "\u060C", "transliteration": [","]
+			},
+			{
+				"unicodeName": "ARABIC DATE SEPARATOR", "name": "date separator", 
+				"arabicChar": "\u060D", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC SEMI COLON", "name": "semi colon", 
+				"arabicChar": "\u061B", "transliteration": [";"]
+			},
+			{
+				"unicodeName": "ARABIC TRIPLE DOT PUNCTUATION MARK", "name": "triple dot", 
+				"arabicChar": "\u061B", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC QUESTION MARK", "name": "question mark", 
+				"arabicChar": "\u061F", "transliteration": ["?"]
+			},
+			{
+				"unicodeName": "ARABIC PERCENT SIGN", "name": "percent", 
+				"arabicChar": "\u066A", "transliteration": ["%"]
+			},
+			{
+				"unicodeName": "ARABIC DECIMAL SEPARATOR", "name": "decimal separator", 
+				"arabicChar": "\u066B", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC THOUSANDS SEPARATOR", "name": "thousands separator", 
+				"arabicChar": "\u066C", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC FIVE POINTED STAR", "name": "thousands separator", 
+				"arabicChar": "\u066D", "transliteration": ["[void]"]
+			}
+		]},
+		{"groupName": "diacritics", "groupSet": [
+			{
+				"unicodeName": "ARABIC FATHA", "name": "fatḥah", 
+				"arabicChar": "\u064E", "transliteration": ["a"]
+			},
+			{
+				"unicodeName": "ARABIC KASRA", "name": "kasrah", 
+				"arabicChar": "\u0650", "transliteration": ["i","e"]
+			},
+			{
+				"unicodeName": "ARABIC DAMMA", "name": "ḍammah", 
+				"arabicChar": "\u064F", "transliteration": ["u","o"]
+			},
+			{
+				"unicodeName": "ARABIC FATHATAN", "name": "fatḥatain", 
+				"arabicChar": "\u064B", "transliteration": ["aN"]
+			},
+			{
+				"unicodeName": "ARABIC KASRATAN", "name": "kasratain", 
+				"arabicChar": "\u064D", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC DAMMATAN", "name": "ḍammatain", 
+				"arabicChar": "\u064C", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC SUKUN", "name": "sukun", 
+				"arabicChar": "\u0652", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC SHADDA", "name": "shaddah", 
+				"arabicChar": "\u0651", "transliteration": ["xx"]
+			},
+			{
+				"unicodeName": "ARABIC MADDAH ABOVE", "name": "maddah", 
+				"arabicChar": "\u0653", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC SUPERSCRIPT ALEF", "name": "superscript alif", 
+				"arabicChar": "\u0670", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "ARABIC SUBSCRIPT ALEF", "name": "subscript alif", 
+				"arabicChar": "\u0656", "transliteration": ["[void]"]
+			}
+		]},
+		
+		{"groupName": "grammar rules", "groupSet": []}
+		
+	]
+}

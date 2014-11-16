@@ -1,0 +1,6 @@
+/* ng-sortable css file */
+.as-sortable-item,.as-sortable-placeholder{display:block;min-height:20px;margin:1px 2px 5px 1px;}
+.as-sortable-item{}
+.as-sortable-item-handle{cursor:move}
+.as-sortable-placeholder{border:1px dashed darkgrey;box-sizing:border-box;background-color:#000}
+.as-sortable-drag{position:absolute;pointer-events:none;opacity:.8;z-index:9999}.as-sortable-hidden{display:none!important}

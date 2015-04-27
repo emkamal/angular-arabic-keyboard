@@ -77,6 +77,33 @@
 			}
 		]},
 		
+		{"groupName": "jawi characters", "groupSet": [
+			{
+				"unicodeName": "", "name": "", 
+				"arabicChar": "\u0686", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "", "name": "", 
+				"arabicChar": "\u06A0", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "", "name": "", 
+				"arabicChar": "\u06A4", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "", "name": "", 
+				"arabicChar": "\u06AC", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "", "name": "", 
+				"arabicChar": "\u06BD", "transliteration": ["[void]"]
+			},
+			{
+				"unicodeName": "", "name": "", 
+				"arabicChar": "\u06CF", "transliteration": ["[void]"]
+			}
+		]},
+		
 		
 		{"groupName": "numerals", "groupSet": [
 			{"unicodeName": "ARABIC-INDIC DIGIT ZERO", "name": "zero", "arabicChar": "\u0660", "transliteration": ["0"]},
